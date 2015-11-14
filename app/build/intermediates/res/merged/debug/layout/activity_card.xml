@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.cg.wuyufei.activity.CardActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"></android.support.v7.widget.Toolbar>
+
+
+</LinearLayout>
+<!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/layout/activity_card.xml -->

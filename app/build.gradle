@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "edu.gc.wuyufei"
+        minSdkVersion 15
+        targetSdkVersion 23
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    //    compile 'org.rajawali3d:rajawali:1.0.48-SNAPSHOT@aar'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'org.rajawali3d:rajawali:1.0.186-SNAPSHOT@aar'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile 'com.android.support:percent:23.1.0'
+    compile 'com.android.support:support-annotations:23.1.0'}

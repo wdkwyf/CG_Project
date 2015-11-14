@@ -1,0 +1,88 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:5:5-30
+	android:versionCode
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:7:5-31:19
+MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:percent:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/percent/23.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:11:9-41
+	android:allowBackup
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:9:9-35
+	android:icon
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:10:9-45
+	android:theme
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:12:9-48
+	android:name
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:8:9-57
+activity#edu.cg.wuyufei.activity.MainActivity
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:13:9-21:20
+	android:label
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:15:13-45
+	android:name
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:14:13-64
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:19:27-74
+activity#edu.cg.wuyufei.activity.CardActivity
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:22:9-25:20
+	android:label
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:24:13-56
+	android:name
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:23:13-64
+activity#edu.cg.wuyufei.activity.DeleteActivity
+ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:26:9-30:20
+	android:label
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:28:13-58
+	android:theme
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:29:13-52
+	android:name
+		ADDED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml:27:13-66
+uses-sdk
+INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [org.rajawali3d:rajawali:1.0.186-SNAPSHOT] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/org.rajawali3d/rajawali/1.0.186-SNAPSHOT/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:percent:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/percent/23.1.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.0] /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/AndroidManifest.xml
