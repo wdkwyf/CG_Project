@@ -101,7 +101,7 @@ public class ImageAdapter extends BaseAdapter {
 			bd.setAntiAlias(true);
 			imageView.setImageDrawable(bd);
 			// 设置图片的大小
-			imageView.setLayoutParams(new GalleryFlow.LayoutParams(260, 340));
+			imageView.setLayoutParams(new GalleryFlow.LayoutParams(300, 500));
 			mImages[index++] = imageView;
 		}
 		return true;

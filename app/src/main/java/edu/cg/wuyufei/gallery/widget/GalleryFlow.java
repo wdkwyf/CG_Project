@@ -100,14 +100,14 @@ public class GalleryFlow extends Gallery {
 		mCamera.translate(0.0f, 0.0f, 100.0f);
 
 		if (rotation < mMaxRotateAngle) {
-			float zoom = (float) ((rotation * 1.5) + mMaxZoom);
+			float zoom = (float) ((rotation * 2) + mMaxZoom);
 			mCamera.translate(0.0f, 0.0f, zoom);
 			child.setAlpha((int) (255 - rotation * 2.5));
 		}
 
 		/// 在Y轴上旋转，对应图片竖向向里翻转。
         // 如果在X轴上旋转，则对应图片横向向里翻转。
-		mCamera.rotateY(rotateAngle);
+		mCamera.rotateY(rotateAngle + 15f);
 		mCamera.getMatrix(matrix);
 		matrix.preTranslate(-(imageWidth / 2), -(imageHeight / 2));
 		matrix.postTranslate((imageWidth / 2), (imageHeight / 2));

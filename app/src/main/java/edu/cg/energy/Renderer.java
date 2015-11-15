@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import org.rajawali3d.Camera;
 import org.rajawali3d.lights.DirectionalLight;
 import org.rajawali3d.materials.Material;
 import org.rajawali3d.materials.methods.DiffuseMethod;
@@ -22,10 +23,12 @@ public class Renderer extends RajawaliRenderer {
     public Context context;
     private DirectionalLight directionalLight;
     private Sphere earthSpere;
+
     public Renderer(Context context) {
         super(context);
         this.context = context;
         setFrameRate(60);
+
 
     }
 
@@ -41,7 +44,7 @@ public class Renderer extends RajawaliRenderer {
 
     @Override
     protected void initScene() {
-        directionalLight = new DirectionalLight(1f,0.2f,-1.0f);
+        directionalLight = new DirectionalLight(1f, 0.2f, -1.0f);
         directionalLight.setColor(1.0f, 1.0f, 1.0f);
         directionalLight.setPower(2);
         getCurrentScene().addLight(directionalLight);
@@ -52,23 +55,24 @@ public class Renderer extends RajawaliRenderer {
         material.setColor(0);
 
         Texture earthTexture = new Texture("Earth", R.drawable.baiyang);
-        try{
+        try {
             material.addTexture(earthTexture);
 
-        }catch (ATexture.TextureException e){
-            Log.d("DEBUG","TEXTURE ERROR");
+        } catch (ATexture.TextureException e) {
+            Log.d("DEBUG", "TEXTURE ERROR");
         }
 
 
-        earthSpere = new Sphere(1,24,24);
+        earthSpere = new Sphere(0.5f, 14, 14);
         earthSpere.setMaterial(material);
         getCurrentScene().addChild(earthSpere);
         getCurrentCamera().setZ(4.2);
+
     }
 
     @Override
     protected void onRender(long ellapsedRealtime, double deltaTime) {
         super.onRender(ellapsedRealtime, deltaTime);
-        earthSpere.rotate(Vector3.Axis.Y,1.0);
+        earthSpere.rotate(Vector3.Axis.Y, 1.0);
     }
 }

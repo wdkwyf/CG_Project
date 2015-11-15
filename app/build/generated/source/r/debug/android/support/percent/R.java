@@ -8,19 +8,19 @@ package android.support.percent;
 
 public final class R {
 	public static final class attr {
-		public static final int layout_aspectRatio = 0x7f010069;
-		public static final int layout_heightPercent = 0x7f010061;
-		public static final int layout_marginBottomPercent = 0x7f010066;
-		public static final int layout_marginEndPercent = 0x7f010068;
-		public static final int layout_marginLeftPercent = 0x7f010063;
-		public static final int layout_marginPercent = 0x7f010062;
-		public static final int layout_marginRightPercent = 0x7f010065;
-		public static final int layout_marginStartPercent = 0x7f010067;
-		public static final int layout_marginTopPercent = 0x7f010064;
-		public static final int layout_widthPercent = 0x7f010060;
+		public static final int layout_aspectRatio = 0x7f01008a;
+		public static final int layout_heightPercent = 0x7f010082;
+		public static final int layout_marginBottomPercent = 0x7f010087;
+		public static final int layout_marginEndPercent = 0x7f010089;
+		public static final int layout_marginLeftPercent = 0x7f010084;
+		public static final int layout_marginPercent = 0x7f010083;
+		public static final int layout_marginRightPercent = 0x7f010086;
+		public static final int layout_marginStartPercent = 0x7f010088;
+		public static final int layout_marginTopPercent = 0x7f010085;
+		public static final int layout_widthPercent = 0x7f010081;
 	}
 	public static final class styleable {
-		public static final int[] PercentLayout_Layout = { 0x7f010060, 0x7f010061, 0x7f010062, 0x7f010063, 0x7f010064, 0x7f010065, 0x7f010066, 0x7f010067, 0x7f010068, 0x7f010069 };
+		public static final int[] PercentLayout_Layout = { 0x7f010081, 0x7f010082, 0x7f010083, 0x7f010084, 0x7f010085, 0x7f010086, 0x7f010087, 0x7f010088, 0x7f010089, 0x7f01008a };
 		public static final int PercentLayout_Layout_layout_aspectRatio = 9;
 		public static final int PercentLayout_Layout_layout_heightPercent = 1;
 		public static final int PercentLayout_Layout_layout_marginBottomPercent = 6;

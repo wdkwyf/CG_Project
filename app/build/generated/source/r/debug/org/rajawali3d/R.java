@@ -10,13 +10,13 @@ public final class R {
 	public static final class attr {
 		public static final int frameRate = 0x7f010001;
 		public static final int isTransparent = 0x7f010004;
-		public static final int multisamplingEnabled = 0x7f010005;
-		public static final int renderMode = 0x7f010006;
-		public static final int useCoverageAntiAliasing = 0x7f010008;
+		public static final int multisamplingEnabled = 0x7f010020;
+		public static final int renderMode = 0x7f010021;
+		public static final int useCoverageAntiAliasing = 0x7f010023;
 	}
 	public static final class id {
-		public static final int RENDER_CONTINUOUS = 0x7f0c000b;
-		public static final int RENDER_WHEN_DIRTY = 0x7f0c000c;
+		public static final int RENDER_CONTINUOUS = 0x7f0c000e;
+		public static final int RENDER_WHEN_DIRTY = 0x7f0c000f;
 	}
 	public static final class raw {
 		public static final int blend_add_fragment_shader = 0x7f050000;
@@ -31,13 +31,13 @@ public final class R {
 		public static final int vignette_fragment_shader = 0x7f050009;
 	}
 	public static final class styleable {
-		public static final int[] RajawaliSurfaceView = { 0x7f010001, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010008 };
+		public static final int[] RajawaliSurfaceView = { 0x7f010001, 0x7f010004, 0x7f010020, 0x7f010021, 0x7f010023 };
 		public static final int RajawaliSurfaceView_frameRate = 0;
 		public static final int RajawaliSurfaceView_isTransparent = 1;
 		public static final int RajawaliSurfaceView_multisamplingEnabled = 2;
 		public static final int RajawaliSurfaceView_renderMode = 3;
 		public static final int RajawaliSurfaceView_useCoverageAntiAliasing = 4;
-		public static final int[] RajawaliTextureView = { 0x7f010001, 0x7f010005, 0x7f010006, 0x7f010008 };
+		public static final int[] RajawaliTextureView = { 0x7f010001, 0x7f010020, 0x7f010021, 0x7f010023 };
 		public static final int RajawaliTextureView_frameRate = 0;
 		public static final int RajawaliTextureView_multisamplingEnabled = 1;
 		public static final int RajawaliTextureView_renderMode = 2;
