@@ -8,6 +8,14 @@
     <string name="action_edit">Edit</string>
     <string name="title_activity_card">CardActivity</string>
     <string name="title_activity_delete">DeleteActivity</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Enter the password</string>
 
 
 </resources>

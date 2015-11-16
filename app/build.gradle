@@ -20,7 +20,6 @@ android {
 
 
 dependencies {
-    //    compile 'org.rajawali3d:rajawali:1.0.48-SNAPSHOT@aar'
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'org.rajawali3d:rajawali:1.0.186-SNAPSHOT@aar'
     compile 'com.android.support:appcompat-v7:23.1.0'
@@ -28,7 +27,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.1.0'
     compile 'com.android.support:percent:23.1.0'
     compile 'com.android.support:support-annotations:23.1.0'
-    compile('com.github.afollestad.material-dialogs:core:0.8.5.0@aar') {
-        transitive = true
-    }
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.0@aar') { transitive = true }
 }

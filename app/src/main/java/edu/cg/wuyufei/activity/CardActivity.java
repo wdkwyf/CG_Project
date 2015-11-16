@@ -37,9 +37,9 @@ public class CardActivity extends AppCompatActivity {
         toolbar.setTitle("My Title");
         toolbar.setSubtitle("Sub title");
         setSupportActionBar(toolbar);
-                Intent intent = getIntent();
+        Intent intent = getIntent();
         int message = intent
-                .getIntExtra(MainActivity.EXTRA_CARDID,-1);
+                .getIntExtra(MainActivity.EXTRA_CARDID, -1);
         Log.d("----message-----", String.valueOf(message));
         mGLView = new MyGLSurfaceView(this);
         RajawaliSurfaceView surface = MyRSurfaceView.getRSurfaceView(this);
@@ -52,8 +52,6 @@ public class CardActivity extends AppCompatActivity {
 
         rRenderer = new Renderer(this);
         surface.setSurfaceRenderer(rRenderer);
-
-
 
 
     }
@@ -71,21 +69,23 @@ public class CardActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        switch (id){
+        switch (id) {
             case R.id.action_delete:
                 new MaterialDialog.Builder(this).title("我们来玩一个有趣的♂游戏吧，旋转手机控制小球,进入漩涡区域才能删掉哦").onPositive(new MaterialDialog.SingleButtonCallback() {
                     @Override
                     public void onClick(MaterialDialog materialDialog, DialogAction dialogAction) {
                         Intent intent = new Intent(CardActivity.this, DeleteActivity.class);
                         startActivity(intent);
-                        finish();
                     }
                 }).positiveText("好的")
                         .negativeText("才不要")
                         .show();
-//                Snackbar.make(toolbar,"item1",Snackbar.LENGTH_SHORT).show();
-
                 break;
+            case R.id.action_edit:
+                Intent intent = new Intent(CardActivity.this, AddActivity.class);
+                startActivity(intent);
+                break;
+
 
         }
         //noinspection SimplifiableIfStatement

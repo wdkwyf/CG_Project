@@ -110,9 +110,14 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF5252</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorPrimary">#673ab7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="colorPrimaryLight">#D1C4E9</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
@@ -441,15 +446,27 @@
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="btn_sign_up">Sign Up</string>
+    <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values/values.xml -->
+    <eat-comment/>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_password">Enter the password</string>
     <string name="hello_world">Hello world!</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_password">Password</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="title_activity_add">AddActivity</string>
     <string name="title_activity_card">CardActivity</string>
     <string name="title_activity_delete">DeleteActivity</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
