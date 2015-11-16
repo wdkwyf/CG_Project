@@ -12,6 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
+
 import org.rajawali3d.surface.RajawaliSurfaceView;
 
 import edu.cg.energy.MyRSurfaceView;
@@ -70,9 +73,18 @@ public class CardActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id){
             case R.id.action_delete:
+                new MaterialDialog.Builder(this).title("我们来玩一个有趣的♂游戏吧，旋转手机控制小球,进入漩涡区域才能删掉哦").onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog materialDialog, DialogAction dialogAction) {
+                        Intent intent = new Intent(CardActivity.this, DeleteActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }).positiveText("好的")
+                        .negativeText("才不要")
+                        .show();
 //                Snackbar.make(toolbar,"item1",Snackbar.LENGTH_SHORT).show();
-                Intent intent = new Intent(CardActivity.this,DeleteActivity.class);
-                startActivity(intent);
+
                 break;
 
         }

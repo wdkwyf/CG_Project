@@ -68,7 +68,7 @@ public class DeleteActivity extends AppCompatActivity implements SensorEventList
                     startActivity(intent);
                     finish();
                 }
-            }).positiveText("知道了~").show();
+            }).positiveText("正合我意~").show();
             return;
 
         }
