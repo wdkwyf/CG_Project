@@ -466,7 +466,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_add">添加名片</string>
     <string name="title_activity_card">CardActivity</string>
     <string name="title_activity_delete">DeleteActivity</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->

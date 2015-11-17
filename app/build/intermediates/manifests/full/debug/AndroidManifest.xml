@@ -35,8 +35,7 @@
         <activity
             android:name="edu.cg.wuyufei.activity.AddActivity"
             android:label="@string/title_activity_add"
-            android:theme="@style/NoActionBarTheme" >
-        </activity>
+            android:theme="@style/NoActionBarTheme" />
     </application>
 
 </manifest>
