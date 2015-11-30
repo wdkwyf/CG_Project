@@ -2,11 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.0/jars/classes.jar"
+        jar="/Users/wuyufei/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-bac67a516691f6a896fd4151869bf8ba5a06d053.jar" />
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-28a3bb7c7ea5c2ca96fccb757e04531b546c7050.jar" />
+    </item>
+    <item
+        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-a6e68d2bd217d0698ed2b9a19c64e72f8584bfc7.jar" />
+    </item>
+    <item
+        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-fdf647fe4f6d625ecb4ae6af1d9598dc0129d1c2.jar" />
+    </item>
+    <item
+        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/org.rajawali3d/rajawali/1.0.186-SNAPSHOT/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dbfabc2a4c08b8f8d0f709c3f343ac40ae83483f">
+        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-8b2a23b29c33c7fa3b272ca6769f8aa919f9bc0c.jar" />
     </item>
     <item
         jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
@@ -14,6 +35,13 @@
         revision="23.0.1"
         sha1="19026d31f5d3ae868db81319671a642be5fbba08">
         <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-5dab78f0e65513665b2698fe0d8b6b3ef2913ed7.jar" />
+    </item>
+    <item
+        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/percent/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6e7040af4ab4aa797cbf6e6eacf94fcf241ae8f0">
+        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-27d9a0f5c951193e8c5b36f45daf50a0706fca7d.jar" />
     </item>
     <item
         jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.github.afollestad.material-dialogs/core/0.8.5.0/jars/classes.jar"
@@ -30,27 +58,6 @@
         <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-cebb76c11c3458975fa65a832101d44eb7d5f925.jar" />
     </item>
     <item
-        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-a6e68d2bd217d0698ed2b9a19c64e72f8584bfc7.jar" />
-    </item>
-    <item
-        jar="/Users/wuyufei/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-28a3bb7c7ea5c2ca96fccb757e04531b546c7050.jar" />
-    </item>
-    <item
-        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-fdf647fe4f6d625ecb4ae6af1d9598dc0129d1c2.jar" />
-    </item>
-    <item
         jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -58,32 +65,11 @@
         <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-753583dac9c0bdd9520470cca2f20f9b3c1b4af6.jar" />
     </item>
     <item
-        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/percent/23.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6e7040af4ab4aa797cbf6e6eacf94fcf241ae8f0">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-27d9a0f5c951193e8c5b36f45daf50a0706fca7d.jar" />
-    </item>
-    <item
-        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.github.rey5137/material/1.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="0040be6592cbfbb19a2c1e90a759278795ed2280">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-34ef9614bc08b1511df1c78471aef3302fa76f2c.jar" />
-    </item>
-    <item
         jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
         <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-c91196edf75ff054090406cfb6b24fa1382c58a5.jar" />
-    </item>
-    <item
-        jar="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/org.rajawali3d/rajawali/1.0.186-SNAPSHOT/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="dbfabc2a4c08b8f8d0f709c3f343ac40ae83483f">
-        <dex dex="/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/pre-dexed/debug/classes-8b2a23b29c33c7fa3b272ca6769f8aa919f9bc0c.jar" />
     </item>
 
 </items>

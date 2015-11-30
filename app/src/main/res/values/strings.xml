@@ -9,13 +9,16 @@
     <string name="title_activity_card">CardActivity</string>
     <string name="title_activity_delete">DeleteActivity</string>
     <string name="title_activity_add">添加名片</string>
-    <string name="hint_name">Full Name</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="btn_sign_up">Sign Up</string>
-    <string name="err_msg_name">Enter your full name</string>
-    <string name="err_msg_email">Enter valid email address</string>
-    <string name="err_msg_password">Enter the password</string>
+    <string name="hint_name">姓名</string>
+    <string name="hint_email">电子邮件</string>
+    <string name="hint_phone">手机</string>
+    <string name="hint_address">地址</string>
+    <string name="btn_enter_front">我填好了</string>
+    <string name="btn_enter_end">我要上传背面图</string>
+    <string name="err_msg_name">名字去哪儿了？</string>
+    <string name="err_msg_email">请输入正确的电子邮件</string>
+    <string name="err_msg_phone">请输入正确的手机号码</string>
+    <string name="err_msg_address">地址去哪儿了？</string>
 
 
 </resources>

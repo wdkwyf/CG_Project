@@ -448,19 +448,22 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="btn_sign_up">Sign Up</string>
+    <string name="btn_enter_end">我要上传背面图</string>
+    <string name="btn_enter_front">我填好了</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="err_msg_email">Enter valid email address</string>
-    <string name="err_msg_name">Enter your full name</string>
-    <string name="err_msg_password">Enter the password</string>
+    <string name="err_msg_address">地址去哪儿了？</string>
+    <string name="err_msg_email">请输入正确的电子邮件</string>
+    <string name="err_msg_name">名字去哪儿了？</string>
+    <string name="err_msg_phone">请输入正确的手机号码</string>
     <string name="hello_world">Hello world!</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_name">Full Name</string>
-    <string name="hint_password">Password</string>
+    <string name="hint_address">地址</string>
+    <string name="hint_email">电子邮件</string>
+    <string name="hint_name">姓名</string>
+    <string name="hint_phone">手机</string>
     <!-- From: file:/Users/wuyufei/AndroidstudioProjects/CustomGallery-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
