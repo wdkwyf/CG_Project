@@ -19,6 +19,7 @@
     <string name="err_msg_email">请输入正确的电子邮件</string>
     <string name="err_msg_phone">请输入正确的手机号码</string>
     <string name="err_msg_address">地址去哪儿了？</string>
+    <string name="title_activity_cardbox">cardbox</string>
 
 
 </resources>

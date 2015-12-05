@@ -17,15 +17,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
+
 
     <Button
         android:id="@+id/btn_upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
         android:text="@string/btn_enter_end"
         android:textColor="@android:color/white" />
 </LinearLayout>
