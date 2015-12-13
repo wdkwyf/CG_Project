@@ -3,11 +3,10 @@ package edu.cg.wuyufei.activity;
 
 import android.content.Intent;
 import android.opengl.GLSurfaceView;
-import android.support.design.widget.Snackbar;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -17,6 +16,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import org.rajawali3d.surface.RajawaliSurfaceView;
 
+import java.io.File;
+
 import edu.cg.energy.MyRSurfaceView;
 import edu.cg.energy.Renderer;
 import edu.cg.wuyufei.card.MyGLSurfaceView;
@@ -24,9 +25,16 @@ import edu.cg.wuyufei.gallery.R;
 
 
 public class CardActivity extends AppCompatActivity {
+    public static File curCardFront;
+    public static File curCardEnd;
     private GLSurfaceView mGLView;
+    private String imageDirFront;
+    private String imageDirEnd;
+    public final static String CUR_CARDIDFRONT = "edu.cg.wuyufei.activity.CUR_CARDIDFRONT";
+    public final static String CUR_CARDIDEND = "edu.cg.wuyufei.activity.CUR_CARDIDEND";
     Renderer rRenderer;
     Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +48,20 @@ public class CardActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int message = intent
                 .getIntExtra(MainActivity.EXTRA_CARDID, -1);
-        Log.d("----message-----", String.valueOf(message));
+        if (MainActivity.init == 0) {
+            String root = Environment.getExternalStorageDirectory().toString();
+
+
+            imageDirFront = root + "/card/front";
+            imageDirEnd = root + "/card/end";
+            File dir = new File(imageDirFront);
+            File dir2 = new File(imageDirEnd);
+            File[] fileListFront = dir.listFiles();
+            File[] fileListEnd = dir2.listFiles();
+            curCardFront = fileListFront[message];
+            curCardEnd = fileListEnd[message];
+        }
+
         mGLView = new MyGLSurfaceView(this);
         RajawaliSurfaceView surface = MyRSurfaceView.getRSurfaceView(this);
         LinearLayout ll = (LinearLayout) findViewById(R.id.cardLayout);
@@ -75,6 +96,8 @@ public class CardActivity extends AppCompatActivity {
                     @Override
                     public void onClick(MaterialDialog materialDialog, DialogAction dialogAction) {
                         Intent intent = new Intent(CardActivity.this, DeleteActivity.class);
+                        intent.putExtra(CUR_CARDIDFRONT, curCardFront.getAbsolutePath());
+                        intent.putExtra(CUR_CARDIDEND, curCardEnd.getAbsolutePath());
                         startActivity(intent);
                     }
                 }).positiveText("好的")

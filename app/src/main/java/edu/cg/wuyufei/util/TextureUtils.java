@@ -14,7 +14,7 @@ import java.io.InputStream;
  */
 public class TextureUtils {
 
-    public  static int createTexture(int drawableId,Context context) {
+    public  static int createTexture(Bitmap bitmap) {
         int[] textures = new int[2];
         GLES20.glGenTextures(1, textures, 0);
         int textureId = textures[0];
@@ -24,17 +24,8 @@ public class TextureUtils {
         GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
         GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
 
-        InputStream is = context.getResources().openRawResource(drawableId);
-        Bitmap bitmapTmp;
-        try {
-            bitmapTmp = BitmapFactory.decodeStream(is);
-        } finally {
-            try {
-                is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+
+        Bitmap bitmapTmp = bitmap;
         GLUtils.texImage2D(GLES20.GL_TEXTURE_2D, 0, bitmapTmp, 0);
         bitmapTmp.recycle();          //纹理加载成功后释放图片
 

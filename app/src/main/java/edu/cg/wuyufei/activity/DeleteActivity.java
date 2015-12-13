@@ -6,6 +6,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -15,18 +16,24 @@ import android.view.Surface;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import java.io.File;
+
 import edu.cg.RollBall.AndroidBallView;
 import edu.cg.wuyufei.gallery.R;
 
 public class DeleteActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor accelerometer;
+    private String curCardFrontPath;
+    private String curCardEndPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
-
+        Intent intent = getIntent();
+        curCardFrontPath = intent.getStringExtra(CardActivity.CUR_CARDIDFRONT);
+        curCardEndPath = intent.getStringExtra(CardActivity.CUR_CARDIDEND);
         DisplayMetrics deviceMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(deviceMetrics);
 
@@ -64,9 +71,18 @@ public class DeleteActivity extends AppCompatActivity implements SensorEventList
             new MaterialDialog.Builder(this).title("进入漩涡区域，就要删除了哦>.<").onPositive(new MaterialDialog.SingleButtonCallback() {
                 @Override
                 public void onClick(MaterialDialog materialDialog, DialogAction dialogAction) {
-                    Intent intent = new Intent(DeleteActivity.this, CardActivity.class);
-                    startActivity(intent);
+                    String root = Environment.getExternalStorageDirectory().toString();
+
+                    File tmp1 = new File(curCardFrontPath);
+                    File tmp2 = new File(curCardEndPath);
+
+                    if(tmp1.exists() && tmp2.exists()){
+                        tmp1.delete();
+                        tmp2.delete();
+                    }
                     finish();
+                    Intent intent = new Intent(DeleteActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }).positiveText("正合我意~").show();
             return;

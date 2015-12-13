@@ -5,11 +5,15 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="21"
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:name="edu.cg.wuyufei.util.MyApplication"
@@ -42,8 +46,7 @@
         <activity
             android:name="edu.cg.wuyufei.activity.MainActivity"
             android:label="@string/title_activity_cardbox"
-            android:theme="@style/NoActionBarTheme" >
-        </activity>
+            android:theme="@style/NoActionBarTheme" />
     </application>
 
 </manifest>

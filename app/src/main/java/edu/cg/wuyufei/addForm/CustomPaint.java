@@ -66,16 +66,25 @@ public class CustomPaint extends View {
         setDrawingCacheEnabled(true);
         String root = Environment.getExternalStorageDirectory().toString();
         Toast.makeText(getContext(), root + "save file", Toast.LENGTH_SHORT).show();
-        File imgDir = new File(root + "/card/");
-        String imgName;
-        imgDir.mkdirs();
+        File imgDirFront = new File(root + "/card/front");
+        File imgDirEnd = new File(root + "/card/end");
+        String imgNameFront, imgNameEnd;
+        imgDirFront.mkdirs();
+        imgDirEnd.mkdirs();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         String currentDateandTime = sdf.format(new Date());
-        imgName = "img" + currentDateandTime + ".jpg";
-        File file = new File(imgDir, imgName);
-        if (file.exists()) file.delete();
-        FileOutputStream outImg = new FileOutputStream(file);
+        imgNameFront = "img" + currentDateandTime + ".jpg";
+        imgNameEnd = "img" + currentDateandTime + ".jpg";
+
+        File fileFront = new File(imgDirFront, imgNameFront);
+        File fileEnd = new File(imgDirEnd, imgNameEnd);
+        if (fileFront.exists()) fileFront.delete();
+        if (fileEnd.exists()) fileEnd.delete();
+        FileOutputStream outImg = new FileOutputStream(fileFront);
+        FileOutputStream outImg2 = new FileOutputStream(fileEnd);
         bmOverlay.compress(Bitmap.CompressFormat.JPEG, 100, outImg);
+        PageFragment.bitmap.compress(Bitmap.CompressFormat.JPEG,10,outImg2);
+
         setDrawingCacheEnabled(false);
     }
 

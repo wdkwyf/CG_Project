@@ -32,26 +32,18 @@ public class Cube {
 
         topSquare = new Square();
         bottomSquare = new Square();
-        Log.e(message,"create a cube");
 
 
     }
 
     public void draw(float[] scratch){
         MatrixState.scratch = scratch;
-        Log.e("Flag------", String.valueOf(MyGLSurfaceView.flag));
         MatrixState.pushMatrix();
-//        MatrixState.r(180, 1, 0, 0);
-        Log.e("aaaaaa", "-----");
-//        MatrixState.print();
-        //顶面r
-        topSquare.draw(topTexId,bottomTexId);
-        Log.e("bbbbb", "-----");
+
+        topSquare.draw(topTexId, bottomTexId);
         MatrixState.print();
 
         MatrixState.popMatrix();
-
-//        bottomSquare.draw(topTexId,bottomTexId);
 
     }
 

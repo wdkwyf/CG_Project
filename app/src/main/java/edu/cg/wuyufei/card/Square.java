@@ -17,38 +17,38 @@ public class Square {
             // This matrix member variable provides a hook to manipulate
             // the coordinates of the objects that use this vertex shader
             "uniform mat4 uMVPMatrix;" +
-                    "uniform mat4 uMVMatrix;"+
-                    "uniform float uIntensity;"+
+                    "uniform mat4 uMVMatrix;" +
+                    "uniform float uIntensity;" +
                     "attribute vec4 vPosition;" +
-                    "varying vec2 vTexCoordinate;"+
-                    "varying vec4 vColor;"+
-                    "varying float vDiffuse;"+
-                    "attribute vec2 aTexCoordinate;"+
-                    "attribute vec3 aNormal;"+
-                    "uniform vec3 uLightPos;"+
+                    "varying vec2 vTexCoordinate;" +
+                    "varying vec4 vColor;" +
+                    "varying float vDiffuse;" +
+                    "attribute vec2 aTexCoordinate;" +
+                    "attribute vec3 aNormal;" +
+                    "uniform vec3 uLightPos;" +
                     "void main() {" +
-                    "vTexCoordinate = aTexCoordinate;"+
-                    "vec3 modelViewVertex = vec3(uMVMatrix * vPosition);"+
-                    "vec3 modelViewNormal = vec3(uMVMatrix * vec4(aNormal,0.0));"+
-                    "float distance = length(uLightPos - modelViewVertex);"+
-                    "vec3 lightVector = normalize(uLightPos - modelViewVertex);"+
-                    "float diffuse = max(dot(modelViewNormal, lightVector),0.1);"+
-                    "vDiffuse = uIntensity * float(diffuse * (1.0 / (1.0 + (0.25 * distance * distance))));"+
+                    "vTexCoordinate = aTexCoordinate;" +
+                    "vec3 modelViewVertex = vec3(uMVMatrix * vPosition);" +
+                    "vec3 modelViewNormal = vec3(uMVMatrix * vec4(aNormal,0.0));" +
+                    "float distance = length(uLightPos - modelViewVertex);" +
+                    "vec3 lightVector = normalize(uLightPos - modelViewVertex);" +
+                    "float diffuse = max(dot(modelViewNormal, lightVector),0.1);" +
+                    "vDiffuse = uIntensity * float(diffuse * (1.0 / (1.0 + (0.25 * distance * distance))));" +
                     "gl_Position = uMVPMatrix * vPosition;" +
                     "}";
 
     private final String fragmentShaderCode =
             "precision mediump float;" +
                     "uniform vec4 vColor;" +
-                    "uniform sampler2D uTexture;"+
-                    "varying vec2 vTexCoordinate;"+
-                    "varying float vDiffuse;"+
+                    "uniform sampler2D uTexture;" +
+                    "varying vec2 vTexCoordinate;" +
+                    "varying float vDiffuse;" +
                     "void main() {" +
-                    " vec4 finalColor=texture2D(uTexture, vTexCoordinate);"+
+                    " vec4 finalColor=texture2D(uTexture, vTexCoordinate);" +
                     "  gl_FragColor = finalColor * vDiffuse;" +
                     "}";
-    public float xAngle,yAngle,zAngle;
-    public float scale = 1,tranX = 0,tranY = 0,tranZ = 0;
+    public float xAngle, yAngle, zAngle;
+    public float scale = 1, tranX = 0, tranY = 0, tranZ = 0;
     public final String TAG = "Square";
     private final FloatBuffer vertexBuffer;
     private final ShortBuffer drawListBuffer;
@@ -66,21 +66,27 @@ public class Square {
     // number of coordinates per vertex in this array
     static final int COORDS_PER_VERTEX = 3;
     static float squareCoords[] = {
-            -0.8f,  0.5f, 0.0f,   // top left
+            -0.8f, 0.5f, 0.0f,   // top left
             -0.8f, -0.5f, 0.0f,   // bottom left
             0.8f, -0.5f, 0.0f,   // bottom right
-            0.8f,  0.5f, 0.0f }; // top right
-    float texCoor[] ={
-            0.0f, 0.0f,
-            1.0f, 0.0f,
-            1.0f, 1.0f,
-            0.0f, 1.0f,
+            0.8f, 0.5f, 0.0f}; // top right
+
+    float texCoor[] = {
+//            0.0f, 1.0f,
+//            0.0f, 0.0f,
+//            1.0f, 0.0f,
+//            1.0f, 1.0f,
+            1, 0,
+            1, 1,
+            0, 1,
+            0, 0,
+
     };
-    private final short drawOrder[] = { 0, 1, 2, 0, 2, 3 }; // order to draw vertices
+    private final short drawOrder[] = {0, 1, 2, 2, 3,0}; // order to draw vertices
 
     private final int vertexStride = COORDS_PER_VERTEX * 4; // 4 bytes per vertex
 
-    float color[] = { 0.2f, 0.709803922f, 0.898039216f, 1.0f };
+    float color[] = {0.2f, 0.709803922f, 0.898039216f, 1.0f};
 
     /**
      * Sets up the drawing object data for use in an OpenGL ES context.
@@ -128,9 +134,10 @@ public class Square {
         GLES20.glAttachShader(mProgram, fragmentShader); // add the fragment shader to program
         GLES20.glLinkProgram(mProgram);                  // create OpenGL program executables
         //error check
+
         final int[] linkStatus = new int[1];
-        GLES20.glGetProgramiv(mProgram, GLES20.GL_LINK_STATUS,linkStatus,0);
-        if(linkStatus[0] == 0){
+        GLES20.glGetProgramiv(mProgram, GLES20.GL_LINK_STATUS, linkStatus, 0);
+        if (linkStatus[0] == 0) {
             GLES20.glDeleteProgram(mProgram);
             throw new RuntimeException("Error Program link.");
 
@@ -141,31 +148,27 @@ public class Square {
      * Encapsulates the OpenGL ES instructions for drawing this shape.
      *
      * @param mvpMatrix - The Model View Project matrix in which to draw
-     * this shape.
+     *                  this shape.
      */
-    public void draw(int t1,int t2) {
+    public void draw(int t1, int t2) {
         // Add program to OpenGL environment
 
 //        MatrixState.scratch = mvpMatrix;
 //        MatrixState.translate(mTransX, mTransY, mTransZ, scratch);
         int textureId;
-        Log.e("eeee", String.valueOf(yAngle));
-        if(yAngle < 0 ){
-            if(Math.abs(yAngle-90) %360<180+OFFSET){
+        if (yAngle < 0) {
+            if (Math.abs(yAngle - 90) % 360 < 180 + OFFSET) {
                 textureId = t1;
 
-            }
-            else {
+            } else {
                 textureId = t2;
             }
 
-        }
-        else {
-            if(Math.abs(yAngle+90) %360<180-OFFSET){
+        } else {
+            if (Math.abs(yAngle + 90) % 360 < 180 - OFFSET) {
                 textureId = t1;
 
-            }
-            else {
+            } else {
                 textureId = t2;
             }
 
@@ -175,8 +178,7 @@ public class Square {
         MatrixState.rotate(yAngle, 0, 1, 0, MatrixState.scratch);
 //        MatrixState.rotate(zAngle,0,0,1,MatrixState.scratch);
         MatrixState.scale(scale, MatrixState.scratch);
-        MatrixState.translate(tranX,tranY,tranZ,MatrixState.scratch);
-
+        MatrixState.translate(tranX, tranY, tranZ, MatrixState.scratch);
 
 
         GLES20.glUseProgram(mProgram);
@@ -227,7 +229,6 @@ public class Square {
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textureId);
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_FAN, 0, 6);
-
 
 
     }
