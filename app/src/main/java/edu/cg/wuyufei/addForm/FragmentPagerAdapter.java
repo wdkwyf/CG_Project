@@ -9,8 +9,10 @@ import android.support.v4.app.FragmentManager;
  */
 public class FragmentPagerAdapter extends android.support.v4.app.FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] { "正面", "反面", "效果" };
+    private final int PAGE_COUNT = 3;
+    //    private final FragmentManager fragmentManager;
+
+    private String tabTitles[] = new String[]{"正面", "反面", "效果"};
     private Context context;
 
     public FragmentPagerAdapter(FragmentManager fm, Context context) {
@@ -20,7 +22,8 @@ public class FragmentPagerAdapter extends android.support.v4.app.FragmentPagerAd
 
     @Override
     public Fragment getItem(int position) {
-        return PageFragment.newInstance(position+1);
+
+        return PageFragment.newInstance(position + 1);
     }
 
     @Override

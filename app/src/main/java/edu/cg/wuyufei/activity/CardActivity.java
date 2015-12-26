@@ -30,9 +30,9 @@ public class CardActivity extends AppCompatActivity {
     private GLSurfaceView mGLView;
     private String imageDirFront;
     private String imageDirEnd;
+    private LinearLayout ll;
     public final static String CUR_CARDIDFRONT = "edu.cg.wuyufei.activity.CUR_CARDIDFRONT";
     public final static String CUR_CARDIDEND = "edu.cg.wuyufei.activity.CUR_CARDIDEND";
-    Renderer rRenderer;
     Toolbar toolbar;
 
 
@@ -50,8 +50,6 @@ public class CardActivity extends AppCompatActivity {
                 .getIntExtra(MainActivity.EXTRA_CARDID, -1);
         if (MainActivity.init == 0) {
             String root = Environment.getExternalStorageDirectory().toString();
-
-
             imageDirFront = root + "/card/front";
             imageDirEnd = root + "/card/end";
             File dir = new File(imageDirFront);
@@ -63,16 +61,8 @@ public class CardActivity extends AppCompatActivity {
         }
 
         mGLView = new MyGLSurfaceView(this);
-        RajawaliSurfaceView surface = MyRSurfaceView.getRSurfaceView(this);
-        LinearLayout ll = (LinearLayout) findViewById(R.id.cardLayout);
-//        ll.addView(surface);
+        ll = (LinearLayout) findViewById(R.id.cardLayout);
         ll.addView(mGLView);
-
-//        addContentView(surface, new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT));
-
-
-        rRenderer = new Renderer(this);
-        surface.setSurfaceRenderer(rRenderer);
 
 
     }
@@ -112,7 +102,11 @@ public class CardActivity extends AppCompatActivity {
 
         }
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about_us) {
+            Intent intent = new Intent(CardActivity.this, AboutUsActivity.class);
+            startActivity(intent);
+
+
             return true;
         }
 

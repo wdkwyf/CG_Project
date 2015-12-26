@@ -54,7 +54,7 @@ public class Renderer extends RajawaliRenderer {
         material.setDiffuseMethod(new DiffuseMethod.Lambert());
         material.setColor(0);
 
-        Texture earthTexture = new Texture("Earth", R.drawable.baiyang);
+        Texture earthTexture = new Texture("Earth", R.drawable.us);
         try {
             material.addTexture(earthTexture);
 
@@ -63,7 +63,7 @@ public class Renderer extends RajawaliRenderer {
         }
 
 
-        earthSpere = new Sphere(0.5f, 14, 14);
+        earthSpere = new Sphere(0.7f, 14, 14);
         earthSpere.setMaterial(material);
         getCurrentScene().addChild(earthSpere);
         getCurrentCamera().setZ(4.2);

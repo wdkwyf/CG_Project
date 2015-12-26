@@ -97,7 +97,7 @@ public class GalleryFlow extends Gallery {
 
 		// 在Z轴上正向移动camera的视角，实际效果为放大图片。
 		// 如果在Y轴上移动，则图片上下移动；X轴上对应图片左右移动。
-		mCamera.translate(0.0f, 0.0f, 100.0f);
+		mCamera.translate(0.0f, 0.0f, -60.0f);
 
 		if (rotation < mMaxRotateAngle) {
 			float zoom = (float) ((rotation * 2) + mMaxZoom);

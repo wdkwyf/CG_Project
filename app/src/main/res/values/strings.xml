@@ -3,6 +3,7 @@
 
     <string name="app_name">CGProject</string>
     <string name="action_settings">Settings</string>
+    <string name="action_about_us">关于我们</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_delete">Delete</string>
     <string name="action_edit">Edit</string>
@@ -20,6 +21,10 @@
     <string name="err_msg_phone">请输入正确的手机号码</string>
     <string name="err_msg_address">地址去哪儿了？</string>
     <string name="title_activity_cardbox">cardbox</string>
+
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
 </resources>

@@ -32,13 +32,11 @@
         </activity>
         <activity
             android:name="edu.cg.wuyufei.activity.CardActivity"
-            android:label="@string/title_activity_card" >
-        </activity>
+            android:label="@string/title_activity_card" />
         <activity
             android:name="edu.cg.wuyufei.activity.DeleteActivity"
             android:label="@string/title_activity_delete"
-            android:theme="@style/NoActionBarTheme" >
-        </activity>
+            android:theme="@style/NoActionBarTheme" />
         <activity
             android:name="edu.cg.wuyufei.activity.AddActivity"
             android:label="@string/title_activity_add"
@@ -47,6 +45,11 @@
             android:name="edu.cg.wuyufei.activity.MainActivity"
             android:label="@string/title_activity_cardbox"
             android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="edu.cg.wuyufei.activity.AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/FullscreenTheme" />
     </application>
 
 </manifest>

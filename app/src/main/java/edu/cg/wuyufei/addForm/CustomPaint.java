@@ -65,7 +65,7 @@ public class CustomPaint extends View {
         mCanvas.drawText(address, 114 * SCALE + 0.5f, 143 * SCALE + 0.5f, paint);
         setDrawingCacheEnabled(true);
         String root = Environment.getExternalStorageDirectory().toString();
-        Toast.makeText(getContext(), root + "save file", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getContext(), root + "save file", Toast.LENGTH_SHORT).show();
         File imgDirFront = new File(root + "/card/front");
         File imgDirEnd = new File(root + "/card/end");
         String imgNameFront, imgNameEnd;
@@ -109,7 +109,11 @@ public class CustomPaint extends View {
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             try {
-                getDrawnMessage();
+                if(PageFragment.bitmap != null){
+                    getDrawnMessage();
+                    Toast.makeText(getContext(),"名片增加成功",Toast.LENGTH_SHORT).show();
+                }
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }

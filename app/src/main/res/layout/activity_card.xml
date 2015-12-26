@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/splashbackground"
     tools:context="edu.cg.wuyufei.activity.CardActivity">
 
     <android.support.v7.widget.Toolbar

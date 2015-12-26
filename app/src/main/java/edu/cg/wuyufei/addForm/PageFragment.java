@@ -5,21 +5,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+
+
 import android.telephony.PhoneNumberUtils;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.util.Patterns;
+
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +50,7 @@ public class PageFragment extends Fragment implements View.OnClickListener {
     private TextInputLayout inputLayoutName, inputLayoutPhone, inputLayoutEmail, inputLayoutAddress;
     private EditText inputName, inputPhone, inputEmail, inputAddress;
     private ImageView imageView;
+
     public static PageFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -63,6 +64,7 @@ public class PageFragment extends Fragment implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPage = getArguments().getInt(ARG_PAGE);
+
     }
 
     @Nullable
@@ -95,9 +97,7 @@ public class PageFragment extends Fragment implements View.OnClickListener {
                 return viewEnd;
             case 3:
                 viewPre = inflater.inflate(R.layout.fragment_page_preview, container, false);
-
                 return viewPre;
-
 
         }
         return null;
@@ -114,11 +114,8 @@ public class PageFragment extends Fragment implements View.OnClickListener {
         edit.commit();
 
         if (validateName() && validatePhone() && validateAddress() && validateEmail()) {
-            Log.d(TAG, inputName.getText().toString());
-            return;
+            Toast.makeText(context, "正面信息写好了", Toast.LENGTH_SHORT).show();
         }
-        return;
-
 
     }
 
@@ -129,10 +126,11 @@ public class PageFragment extends Fragment implements View.OnClickListener {
                 submitForm();
                 break;
             case R.id.btn_upload:
-                Toast.makeText(getContext(), "click", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "上传背景图", Toast.LENGTH_SHORT).show();
                 startActivityForResult(new Intent(Intent.ACTION_PICK,
                         android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI), GET_FROM_GALLERY);
                 MainActivity.init = 0;
+                Toast.makeText(getContext(), "上传成功", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

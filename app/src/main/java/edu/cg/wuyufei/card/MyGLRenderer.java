@@ -42,7 +42,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
 
         // Set the background frame color_black
-        GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+//        GLES20.glClearColor(1f, 0.0f, 0.0f, 0.2f);
         GLES20.glEnable(GLES20.GL_TEXTURE_2D);
         if (MainActivity.init == 1) {
             imageFront= BitmapFactory.decodeResource(MyApplication.getContext().getResources(), R.drawable.example);
