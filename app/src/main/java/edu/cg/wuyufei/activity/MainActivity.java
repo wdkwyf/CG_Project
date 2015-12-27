@@ -41,6 +41,11 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String root = Environment.getExternalStorageDirectory().toString();
+        File imgDirFront = new File(root + "/card/front");
+        File imgDirEnd = new File(root + "/card/end");
+        imgDirFront.mkdirs();
+        imgDirEnd.mkdirs();
 
         relativeLayout = (RelativeLayout) findViewById(R.id.rootLayout);
         animListener = new AnimListener(relativeLayout);

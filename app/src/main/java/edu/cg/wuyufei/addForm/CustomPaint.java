@@ -65,12 +65,11 @@ public class CustomPaint extends View {
         mCanvas.drawText(address, 114 * SCALE + 0.5f, 143 * SCALE + 0.5f, paint);
         setDrawingCacheEnabled(true);
         String root = Environment.getExternalStorageDirectory().toString();
-//        Toast.makeText(getContext(), root + "save file", Toast.LENGTH_SHORT).show();
         File imgDirFront = new File(root + "/card/front");
         File imgDirEnd = new File(root + "/card/end");
         String imgNameFront, imgNameEnd;
-        imgDirFront.mkdirs();
-        imgDirEnd.mkdirs();
+//        imgDirFront.mkdirs();
+//        imgDirEnd.mkdirs();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
         String currentDateandTime = sdf.format(new Date());
         imgNameFront = "img" + currentDateandTime + ".jpg";
